@@ -1,3 +1,4 @@
+import { UserButton, UserProfile } from '@clerk/nextjs';
 import Link from 'next/link';
 import React from 'react';
 
@@ -18,13 +19,11 @@ const Navbar = ({ user }) => {
                     <Link href="/ncit" className="text-white hover:text-gray-400">NCIT</Link>
                 </li>
             </ul>
-            {
-                user ?
-                    <Link>Logout</Link> :
-                    <div className="flex items-center space-x-4">
-                        <Link href="/login" className="text-white hover:text-gray-400">Login/Sign Up</Link>
-                    </div>
+            {true ? <UserButton /> : <div className="flex items-center space-x-4">
+                <Link href="/login" className="text-white hover:text-gray-400">Login/Sign Up</Link>
+            </div>
             }
+
         </nav>
     )
 };
