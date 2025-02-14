@@ -20,7 +20,7 @@ const Navbar = ({ user }) => {
             </ul>
             {
                 user ?
-                    <Link href="/api/auth/logout">Logout</Link> :
+                    <Link>Logout</Link> :
                     <div className="flex items-center space-x-4">
                         <Link href="/login" className="text-white hover:text-gray-400">Login/Sign Up</Link>
                     </div>
