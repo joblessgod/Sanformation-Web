@@ -3,10 +3,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import {
   ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
 } from '@clerk/nextjs'
 
 
@@ -32,11 +28,8 @@ export default function RootLayout({ children }) {
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-            <Navbar />
-            {children}
+          <Navbar/>
+          {children}
         </body>
       </html>
     </ClerkProvider>
