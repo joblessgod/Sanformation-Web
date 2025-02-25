@@ -23,7 +23,7 @@ const Navbar = async () => {
                         <Link href="/ncit" className="text-white hover:text-gray-400">NCIT</Link>
                     </li>
                     <li>
-                        <Link href="https://coding.sanchit.info.np" className="text-white hover:text-gray-400">CodePenn</Link>
+                        <Link href="https://codepen.sanchit.info.np" className="text-white hover:text-gray-400">CodePenn</Link>
                     </li>
                     <li>
                         <Link href="https://testing.sanchit.info.np" className="text-white hover:text-gray-400">Testing Site</Link>
