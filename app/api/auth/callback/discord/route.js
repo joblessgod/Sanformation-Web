@@ -1,11 +1,13 @@
 import axios from "axios";
+const url = require("url");
 
 export async function GET(req) {
   try {
-    const { code } = req;
+    const newUrl = new URL(req.url);
+    const code = newUrl.searchParams.get("code");
 
     if (code) {
-      const formData = new URLSearchParams({
+      const formData = new url.URLSearchParams({
         client_id: process.env.CLIENT_ID,
         client_secret: process.env.CLIENT_SECRET,
         grant_type: "authorization_code",
@@ -35,7 +37,7 @@ export async function GET(req) {
           }
         );
         console.log(output.data, userInfo.data);
-        new Response("JSON.stringify(output.data, userInfo.data)");
+        Response(output.data);
       }
     }
   } catch (error) {
