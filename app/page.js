@@ -2,7 +2,7 @@ export default function Home() {
   function handleLogin() {}
   return (
     <>
-      <main>Hello World</main>
+      <main className="container mx-auto mt-8 w-full">Hello World</main>
     </>
   );
 }
