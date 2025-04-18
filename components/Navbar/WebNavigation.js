@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-export default function Navigation() {
+export default function WebNavigation() {
   const NavLinks = [
     { title: "Home", slug: "/home", desc: "Go to home" },
     { title: "About", slug: "/about", desc: "Learn more about us" },

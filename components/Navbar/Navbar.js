@@ -1,7 +1,8 @@
 import React from "react";
 import MainLogo from "./MainLogo";
-import Navigation from "./Navigation";
+import WebNavigation from "./WebNavigation";
 import LoginButton from "./LoginButton";
+import MobileNavigation from "./MobileNavigation";
 
 export default function Navbar() {
   return (
@@ -9,7 +10,12 @@ export default function Navbar() {
       <div className="container mx-auto flex justify-between items-center ">
         <MainLogo />
         <div className="flex gap-4">
-          <Navigation />
+          <span className="hidden md:flex gap-4">
+            <WebNavigation />
+          </span>
+          <span className="flex md:hidden">
+            <MobileNavigation />
+          </span>
           {/* <LoginButton /> */}
         </div>
       </div>
